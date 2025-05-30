@@ -1,0 +1,87 @@
+.level-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+}
+
+.language-selector {
+    margin-bottom: 16px;
+}
+
+.language-selector label {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.packages-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.packages-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.package-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.package-button-picked{
+    background-color: #ff8800;color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.package-button:hover {
+    background-color: #0056b3;
+}
+
+.add-package-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-package-button:hover {
+    background-color: #218838;
+}
+
+.level-number {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.level-number input {
+    width: 60px;
+    padding: 4px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.level-main-info
+{
+    display: flex;
+    justify-content: space-around;
+}

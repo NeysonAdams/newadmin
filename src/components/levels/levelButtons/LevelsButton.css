@@ -1,0 +1,16 @@
+.levels-button {
+    background-color: #007bff; /* Синий цвет кнопки */
+    color: #fff; /* Белый текст */
+    border: none; /* Без границ */
+    border-radius: 4px; /* Закругленные углы */
+    padding: 8px 16px; /* Внутренние отступы */
+    cursor: pointer; /* Указатель мыши */
+    font-size: 16px; /* Размер текста */
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+    margin:5px auto;
+    width:150px;
+}
+
+.levels-button:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
+}

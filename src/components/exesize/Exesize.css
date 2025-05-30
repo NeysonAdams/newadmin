@@ -1,0 +1,65 @@
+.exesize {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+}
+
+.exesize-type-selector
+{
+    margin-bottom: 16px;
+}
+
+.generate-button
+{
+    background-color: #007bff; /* Синий цвет кнопки */
+    color: #fff; /* Белый текст */
+    border: none; /* Без границ */
+    border-radius: 4px; /* Закругленные углы */
+    padding: 8px 16px; /* Внутренние отступы */
+    cursor: pointer; /* Указатель мыши */
+    font-size: 16px; /* Размер текста */
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+    margin:5px auto;
+    width:150px;
+}
+
+.sawe-button
+{
+    background-color: #006419; /* Синий цвет кнопки */
+    color: #fff; /* Белый текст */
+    border: none; /* Без границ */
+    border-radius: 4px; /* Закругленные углы */
+    padding: 8px 16px; /* Внутренние отступы */
+    cursor: pointer; /* Указатель мыши */
+    font-size: 16px; /* Размер текста */
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+    margin:5px auto;
+    width:150px;
+}
+
+.delete-button
+{
+    background-color: #960000; /* Синий цвет кнопки */
+    color: #fff; /* Белый текст */
+    border: none; /* Без границ */
+    border-radius: 4px; /* Закругленные углы */
+    padding: 8px 16px; /* Внутренние отступы */
+    cursor: pointer; /* Указатель мыши */
+    font-size: 16px; /* Размер текста */
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+    margin:5px auto;
+    width:150px;
+}
+
+.exesize-header
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-container
+{
+    display: flex;
+}

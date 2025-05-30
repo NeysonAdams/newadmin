@@ -1,0 +1,41 @@
+.ai-component {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 1.5em;
+}
+
+.ai-content {
+  padding: 10px;
+}
+
+.ai-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ai-type-button-handler
+{
+  background-color: orange;
+}
+
+.ai-textarea {
+  margin-bottom: 20px;
+}
+
+.ai-save-button {
+  text-align: right;
+}

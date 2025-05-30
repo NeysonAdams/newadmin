@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    height: 100vh; /* Высота экрана */
+    height: calc(100vh - 60px);
+    width: 100%;
+  }
+  
+  .left-pane, .right-pane {
+    overflow-y: auto; /* Включаем скролл только по вертикали */
+  }
+  
+  .left-pane {
+    flex: 1; 
+    background-color: #f0f0f0; /* Светлый фон */
+    padding: 16px;
+  }
+  
+  .right-pane {
+    padding-top: 50px;
+    flex: 5; 
+    background-color: #e0e0e0; /* Чуть темнее фон */
+    padding: 16px;
+  }
+  
+  .content {
+    height: 200%; /* Делаем контент больше экрана для тестирования скролла */
+  }
+
+  .header-with-button {
+    display: flex; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
+    justify-content: space-between; /* Пространство между элементами */
+    margin-bottom: 16px; /* Отступ снизу */
+    position: sticky; /* Фиксированное положение */
+    top: 0; /* Расстояние от верхней границы при прокрутке */
+    background-color: #f0f0f0; /* Фон для видимости на скролле */
+    z-index: 10; /* Чтобы быть поверх других элементов */
+    padding: 8px; /* Внутренние отступы для аккуратности */
+}
+
+/* Стиль кнопки */
+.add-button {
+    background-color: #007bff; /* Синий цвет кнопки */
+    color: #fff; /* Белый текст */
+    border: none; /* Убираем рамки */
+    border-radius: 4px; /* Закругленные углы */
+    padding: 8px 8px; /* Внутренние отступы */
+    cursor: pointer; /* Указатель мыши */
+    font-size: 16px; /* Размер текста */
+}
+
+/* При наведении мыши */
+.add-button:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
+}
