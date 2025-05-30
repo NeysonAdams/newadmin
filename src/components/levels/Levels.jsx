@@ -30,8 +30,7 @@ const Levels = ({levels, updateLevels, refreshList, refreshListBYRequest}) => {
             language :"ru",
             exesizes: []
           }
-          setCurrentLevel(level)
-          console.log(level);
+          setCurrentLevel(level);
         }, 100);
         
     }

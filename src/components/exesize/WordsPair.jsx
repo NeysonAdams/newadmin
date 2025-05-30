@@ -1,67 +1,58 @@
-import React, { useRef, useState } from "react";
-import "./TestQuestion.css"
+import React, { useState } from "react";
+import "./TestQuestion.css";
 
-const WordsPair = ({words, language, update}) =>
-{
-    const [currentWords, setCurrentWords] = useState(words.words)
+const WordsPair = ({ words, language, update }) => {
+    const [currentWords, setCurrentWords] = useState([...words.words]);
 
-    const handlerQuesyChange = (event) =>
-    {
-        const key = event.target.key;
-        const id = event.target.id;
-
-        if( id==="eng")
-            words.words[key].eng = event.target.value;
-        else if(id==="other")
-        {
-            if (language === "ru")
-                words.words[key].rus = event.target.value;
-            else
-                words.words[key].uzb = event.target.value;
+    const handleWordChange = (index, field, value) => {
+        const updatedWords = [...currentWords];
+        if (field === "eng") {
+            updatedWords[index].eng = value;
+        } else if (field === "other") {
+            if (language === "ru") {
+                updatedWords[index].rus = value;
+            } else {
+                updatedWords[index].uzb = value;
+            }
         }
 
-        setCurrentWords(words.words);
-        update(words);
-    }
+        setCurrentWords(updatedWords);
+        update({ ...words, words: updatedWords });
+    };
 
-    const addNewPair = (event) =>
-    {
-        const pair = {"id": -1, "eng": "", "rus": "", "uzb":""}
-        setCurrentWords((prevItems) => [...prevItems, pair])
-        words.words.push(pair);
-        update(words);
-    }
+    const addNewPair = () => {
+        const newPair = { id: -1, eng: "", rus: "", uzb: "" };
+        const updatedWords = [...currentWords, newPair];
+        setCurrentWords(updatedWords);
+        update({ ...words, words: updatedWords });
+    };
 
     return (
         <>
-            {console.log(currentWords)}
-            {Array.isArray(currentWords) && currentWords.length > 0 ?(
+            {Array.isArray(currentWords) && currentWords.length > 0 &&
                 currentWords.map((word, i) => (
                     <div key={i} className="var">
-                        <label htmlFor="eng">I: </label>
+                        <label htmlFor={`eng-${i}`}>I: </label>
                         <input
-                            id="eng"
+                            id={`eng-${i}`}
                             type="text"
                             value={word.eng}
-                            onChange={handlerQuesyChange}
-                        /><label htmlFor="other">II: </label>
+                            onChange={(e) => handleWordChange(i, "eng", e.target.value)}
+                        />
+                        <label htmlFor={`other-${i}`}>II: </label>
                         <input
-                            id="other"
+                            id={`other-${i}`}
                             type="text"
-                            value={language === "ru" ? word.rus: word.uzb}
-                            onChange={handlerQuesyChange}
+                            value={language === "ru" ? word.rus : word.uzb}
+                            onChange={(e) => handleWordChange(i, "other", e.target.value)}
                         />
                     </div>
-                    ))
-                ) :
-                (
-                    <></>
-                )}
+                ))}
             <button className="play_button" onClick={addNewPair}>
-                    Добавить
+                Добавить
             </button>
         </>
     );
-}
+};
 
 export default WordsPair;

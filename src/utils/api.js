@@ -1,5 +1,5 @@
-const baseUrl = "https://www.eletalk.uz/admin/api";
-const root_url= "https://www.eletalk.uz";
+const baseUrl = "https://khamraeva.pythonanywhere.com/admin/api";
+const root_url= "https://khamraeva.pythonanywhere.com";
 
 const getToken = () => localStorage.getItem('jwt');
 const getRefreshToken = () => localStorage.getItem('refresh');
