@@ -96,7 +96,7 @@ export const getAllLevels = () => {
             method: "GET",
             headers: {
                 "Content-type": "application/json",
-                "Authorization": `Bearer ${token}`
+                //"Authorization": `Bearer ${token}`
             }
         })
     );
@@ -109,7 +109,7 @@ export const getLevelById = (id) =>{
             method: "GET",
             headers: {
                 "Content-type": "application/json",
-                "Authorization": `Bearer ${token}`
+                //"Authorization": `Bearer ${token}`
             }
         })
     );
@@ -159,7 +159,6 @@ export const generateExesize = ({difficulty, type, language, itype}) =>
     return sendRequestWithAuthHandling(() => 
         fetch(`${baseUrl}/generate`, {
             method: "POST",
-            mode: 'no-cors',
             headers: {
                "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
@@ -176,10 +175,8 @@ export const saweLevel = ({level}) =>
     return sendRequestWithAuthHandling(() => 
         fetch(`${baseUrl}/levels`, {
             method: "POST",
-            mode: 'no-cors',
             headers: {
-               "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`
+               "Content-Type": "application/json"
             },
             body: JSON.stringify(level),
         })
